@@ -65,11 +65,8 @@ const sidebar = {
   ],
 };
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+const darkTheme = createTheme();
+
 
 export default function Home({ allPostsData }) {
   return (

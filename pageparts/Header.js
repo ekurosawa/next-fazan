@@ -11,6 +11,7 @@ import AppBar from '@mui/material/AppBar';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
 import CssBaseline from '@mui/material/CssBaseline';
+import { pink } from '@mui/material/colors';
 
 
 function Header(props) {
@@ -23,9 +24,8 @@ function Header(props) {
       <CssBaseline />
       <AppBar
         position="fixed"
-        color="default"
         elevation={1}
-        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        sx={{backgroundColor: "#f785e8fc", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Link 
