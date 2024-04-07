@@ -3,7 +3,8 @@ title: "冷たさについて"
 date: "2023.10.22"
 writer: "白田 一郎"
 thumbNa: /images/tsume_1.png
-tag: [”文章"]
+tag: ["文章", "感覚"]
+direction: ho
 ---
 
 こーじちゅー。。

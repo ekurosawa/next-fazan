@@ -3,7 +3,7 @@ title: "食べるとおいしい？"
 date: "2023.11.03"
 writer: "柿本 建"
 thumbNa: /images/R0019098.png
-tag: ["食事"]
+tag: ["食事", "文章"]
 ---
  
  こーじちゅー。。
