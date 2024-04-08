@@ -65,7 +65,11 @@ const sidebar = {
   ],
 };
 
-const darkTheme = createTheme();
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 
 export default function Home({ allPostsData }) {
@@ -116,14 +120,14 @@ export default function Home({ allPostsData }) {
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       <Box justifyContent="space-between" display="flex">
-                        <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary">
+                        <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} >
                           {date}
                         </Typography>
-                        <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
+                        <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }}  >
                           {writer}
                         </Typography>
                       </Box>
-                      <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" className={NSJ.className}>
+                      <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }}  className={NSJ.className}>
                         {title}
                       </Typography>
                     </CardContent>
@@ -141,7 +145,7 @@ export default function Home({ allPostsData }) {
           description={sidebar.description}
           archives={sidebar.archives}
           social={sidebar.social}
-                    />
+        />
       </Container>
       <Footer></Footer>
     </ThemeProvider>

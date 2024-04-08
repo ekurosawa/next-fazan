@@ -27,11 +27,15 @@ import { Link, Typography } from '@mui/material';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
 
-const defaultTheme = createTheme();
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 export default function Post({ postData }) {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={darkTheme}>
       <link rel="icon" href="favi.ico" />
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
 
@@ -52,8 +56,8 @@ export default function Post({ postData }) {
               py={1}
               sx={{
                 fontSize: 18,
-                fontWeight: "bold",
-                color: "text.secondary"
+                //fontWeight: "bold",
+                //color: "text.first"
               }}>
               {postData.date}
             </Typography>
@@ -65,7 +69,7 @@ export default function Post({ postData }) {
                   key={Link}
                   sx={{
                     fontSize: 17,
-                    color: "text.secondary",
+                    color: "#1a1a1a",
                     textDecoration: 'none'
                   }}
                   href={`/tag/${encodeURIComponent(val)}`}>
@@ -88,7 +92,8 @@ export default function Post({ postData }) {
           <Typography
             sx={{
               fontSize: 16, textAlign: "right"
-            }} color="text.secondary" >
+            }} //color="text.secondary" 
+            >
             {postData.writer}
           </Typography>
 

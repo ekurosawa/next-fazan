@@ -20,7 +20,6 @@ function Header(props) {
     <React.Fragment>
       <link rel="icon" href="/favi.ico" />
 
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
       <AppBar
         position="fixed"

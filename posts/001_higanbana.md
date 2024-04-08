@@ -7,6 +7,8 @@ tag: ["散歩", "花"]
 direction: va
 ---
 
+こーじちゅー。。
+<!--
 
 ![Alt text](/images/hig_1.jpg)
 
@@ -60,3 +62,4 @@ direction: va
 .pd2 {font-size:1.2em;}
 
 </style>
+-->

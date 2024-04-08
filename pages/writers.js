@@ -28,6 +28,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
+import { Noto_Sans_JP } from "next/font/google";
+
+const NSJ = Noto_Sans_JP({
+    weight: "400",
+    subsets: ["latin"],
+  })
 
 const writerData = [
     {
@@ -62,8 +68,11 @@ const writerData = [
     },
 ];
 
-
-const darkTheme = createTheme();
+const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
 
 export default function writers() {
 
@@ -81,21 +90,21 @@ export default function writers() {
                 <Grid container item spacing={5} sx={{ mt: 2, mb: 0, pb: 1 }}>
                     <Container maxWidth="lg">
                         <Typography
-                            component="h1"
+                            className={NSJ.className}
                             variant="h4"
                             align="center"
-                            sx={{ color: "#1a1a1a" }}>
-                            メンバー
+                            sx={{ color: "#1a1a1a",mb: 1 }}>
+                            Writers
                         </Typography >
                         <Grid
                             container sx={{ mb: 1 }} spacing={4} // containe spacing : アイテム幅の調整
-                            >
+                        >
                             {writerData.map(({ wart, wname, intro, wnameen }, index) => (
                                 <Grid item key={index} xs={12} sm={12} md={6}>
                                     <Card
                                         component="a"
                                         href="#"
-                                        style={{ color: "aliceblue" }}
+                                        style={{ backgroundColor: "#ffffff" }}
                                         sx={{ display: 'flex', flexDirection: 'column' }} >
                                         <CardContent sx={{ flex: '10 auto' }} >
                                             <Box display="flex">
@@ -104,6 +113,7 @@ export default function writers() {
                                                     sx={{ width: 151 }}
                                                     image={wart}
                                                     alt="writer art"
+                                                    backgroundColor="#FFFFFF"
                                                 />
                                                 <Box px={2} sx={{ pt: 1 }} color='inherit'>
                                                     <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold"  >

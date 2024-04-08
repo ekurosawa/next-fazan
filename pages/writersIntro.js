@@ -63,7 +63,11 @@ const writerData = [
 ];
 
 
-const darkTheme = createTheme();
+const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
 
 export default function writers() {
 
