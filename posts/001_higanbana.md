@@ -7,9 +7,6 @@ tag: ["散歩", "花"]
 direction: va
 ---
 
-こーじちゅー。。
-<!--
-
 ![Alt text](/images/hig_1.jpg)
 
 
@@ -46,7 +43,7 @@ direction: va
 
 ![Alt text](/images/hig_4.jpg)
 
-
+<!--
 <style>
 .tate {
   writing-mode: vertical-rl;

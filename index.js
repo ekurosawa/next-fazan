@@ -49,7 +49,6 @@ const sidebar = {
   archives: [
     { title: 'Nov 2023', url: '#' },
     { title: 'Oct 2023', url: '#' },
-
   ],
   social: [
     { name: 'Twitter', icon: TwitterIcon },
@@ -58,13 +57,12 @@ const sidebar = {
 
 const defaultTheme = createTheme();
 
-
 export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={defaultTheme}>
       <link rel="icon" href="/1104_illu.svg" />
 
-      <Header >
+      <Header>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Header>
 
@@ -78,7 +76,6 @@ export default function Home({ allPostsData }) {
             ))}*/}
         </Grid>
         <Grid container py={2} spacing={5} sx={{ mt: 3 }}>
-
           <Container maxWidth="lg">
             <Typography
               component="h1"
@@ -89,10 +86,7 @@ export default function Home({ allPostsData }) {
             >
               Articles
             </Typography>
-            <Grid
-              container spacing={4}
-            >
-
+            <Grid container spacing={4}>
               {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
                 <Grid item key={card} xs={12} sm={6} md={4}>
                   <Card
@@ -119,19 +113,16 @@ export default function Home({ allPostsData }) {
                           {writer}
                         </Typography>
                       </Box>
-                        {/*be{bull}nev{bull}o{bull}lent*/}
-                        <Link href={`/posts/${id}`} color="inherit">{title}</Link>
-                        <br />
+                      {/*be{bull}nev{bull}o{bull}lent*/}
+                      <Link href={`/posts/${id}`} color="inherit">{title}</Link>
+                      <br />
                     </CardContent>
                   </Card>
                 </Grid>
               ))}
               {/*</ul>*/}
             </Grid>
-
-
           </Container>
-
         </Grid>
       </main>
 
@@ -141,10 +132,7 @@ export default function Home({ allPostsData }) {
         archives={sidebar.archives}
         social={sidebar.social}
       />
-
-
       <Footer>
-
       </Footer>
     </ThemeProvider>
   );
@@ -172,12 +160,8 @@ export async function getStaticProps() {
   };
 }
 
-
-
 {/*<Typography variant="body2" color="text.secondary">
                   well meaning and kindly.
                   <br />
                   {'"a benevolent smile"'}
                   </Typography>*/}
-
-

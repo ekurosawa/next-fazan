@@ -28,7 +28,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
-
 const writerData = [
     {
         wart: '/images/itiroshirota.png',
@@ -61,7 +60,6 @@ const writerData = [
         intro: '事務, エンジニア'
     },
 ];
-
 
 const darkTheme = createTheme({
     palette: {
@@ -133,9 +131,7 @@ export default function writers() {
                     </Container>
                 </Grid>
             </Container>
-
             <Footer></Footer>
-
         </ThemeProvider>
     );
 }
@@ -161,6 +157,3 @@ export async function getStaticProps() {
         },
     };
 }
-
-
-

@@ -93,7 +93,7 @@ export default function Post({ postData }) {
             sx={{
               fontSize: 16, textAlign: "right"
             }} //color="text.secondary" 
-            >
+          >
             {postData.writer}
           </Typography>
 

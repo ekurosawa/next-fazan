@@ -33,7 +33,7 @@ import { Noto_Sans_JP } from "next/font/google";
 const NSJ = Noto_Sans_JP({
     weight: "400",
     subsets: ["latin"],
-  })
+})
 
 const writerData = [
     {
@@ -70,9 +70,9 @@ const writerData = [
 
 const darkTheme = createTheme({
     palette: {
-      mode: 'dark',
+        mode: 'dark',
     },
-  });
+});
 
 export default function writers() {
 
@@ -93,7 +93,7 @@ export default function writers() {
                             className={NSJ.className}
                             variant="h4"
                             align="center"
-                            sx={{ color: "#1a1a1a",mb: 1 }}>
+                            sx={{ color: "#1a1a1a", mb: 1 }}>
                             Writers
                         </Typography >
                         <Grid
@@ -137,7 +137,6 @@ export default function writers() {
                     </Container>
                 </Grid>
             </Container>
-
             <Footer></Footer>
         </ThemeProvider>
     );
