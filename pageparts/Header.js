@@ -65,9 +65,9 @@ function Header(props) {
             ABOUT
           </Link>
 
-          <div className='search'>
+          {/*<div className='search'>
             <Search />
-          </div>
+  </div>*/}
 
           {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
