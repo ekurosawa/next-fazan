@@ -24,51 +24,51 @@ function Header(props) {
       <AppBar
         position="fixed"
         elevation={1}
-        sx={{backgroundColor: "#00bfff", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        sx={{ backgroundColor: "#00bfff", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Link 
-          fontStyle="bold"
-          variant="h5" 
-          color="inherit" 
-          noWrap sx={{ flexGrow: 1 }} 
-          href="/" 
-          style={{ textDecoration: 'none' }}>
+          <Link
+            fontStyle="bold"
+            variant="h5"
+            color="inherit"
+            noWrap sx={{ flexGrow: 1 }}
+            href="/"
+            style={{ textDecoration: 'none' }}>
             Nakazuba
           </Link>
-          <nav>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="/writers"
-              sx={{ my: 1, mx: 1.5 }}
-              style={{ textDecoration: 'none' }}
-            >
-              WRITERS
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-              style={{ textDecoration: 'none' }}
-            >
-              SERIALIZATION
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-              style={{ textDecoration: 'none' }}
-            >
-              ABOUT
-            </Link>
-            {/*20240315*/}
-             className='search'
-                <Search />
-              
-          </nav>
+
+          <Link
+            variant="button"
+            color="text.primary"
+            href="/writers"
+            sx={{ my: 1, mx: 1.5 }}
+            style={{ textDecoration: 'none' }}
+          >
+            WRITERS
+          </Link>
+          <Link
+            variant="button"
+            color="text.primary"
+            href="#"
+            sx={{ my: 1, mx: 1.5 }}
+            style={{ textDecoration: 'none' }}
+          >
+            SERIALIZATION
+          </Link>
+          <Link
+            variant="button"
+            color="text.primary"
+            href="#"
+            sx={{ my: 1, mx: 1.5 }}
+            style={{ textDecoration: 'none' }}
+          >
+            ABOUT
+          </Link>
+
+          <div className='search'>
+            <Search />
+          </div>
+
           {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
           </Button>*/}
