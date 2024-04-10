@@ -28,7 +28,7 @@ export default function Footer() {
     <ThemeProvider theme={defaultTheme}>
 
       <CssBaseline />
-      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+      <Container component="main" maxWidth="sm">
       </Container>
       <Box
         component="footer"
@@ -41,7 +41,6 @@ export default function Footer() {
       >
         <Container maxWidth="sm">
           <Typography variant="body1">
-
             Nakazuba
           </Typography>
           <Copyright />

@@ -52,7 +52,7 @@ export default function Tag({ postData, tag }) {
               variant="h4"
               align="center"
               sx={{ color: "#1a1a1a" }}
-              marginBottom={4}>
+              marginBottom={1.5}>
               #{tag}
             </Typography>
 

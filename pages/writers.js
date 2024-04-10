@@ -93,7 +93,7 @@ export default function writers() {
                             className={NSJ.className}
                             variant="h4"
                             align="center"
-                            sx={{ color: "#1a1a1a", mb: 1 }}>
+                            sx={{ color: "#1a1a1a", mb: 1.5 }}>
                             Writers
                         </Typography >
                         <Grid

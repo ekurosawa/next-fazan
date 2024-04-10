@@ -29,18 +29,18 @@ function Sidebar(props) {
         <Typography>{sidebar.description}</Typography>
   </Paper>*/}
 
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+      <Typography variant="h6">
         Archives
       </Typography>
 
     
       {archives.map(({archive, title, url}, ) => (
-        <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none' }}>
+        <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none' }} color="#000000">
           {title}
         </Link>
       ))}
 
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+      <Typography variant="h6" sx={{ mt: 3 }}>
         Social
       </Typography>
 
@@ -53,9 +53,9 @@ function Sidebar(props) {
           sx={{ mb: 0.5 }}
           style={{ textDecoration: 'none' }}
         >
-          <Stack direction="row" spacing={1} alignItems="center">
+          <Stack direction="row" spacing={1} alignItems="center" style={{ textDecoration: 'none' }} color="#000000">
             <network.icon />
-            <span>{network.name}</span>
+            <span >{network.name}</span>
           </Stack>
         </Link>
       ))}
@@ -64,9 +64,6 @@ function Sidebar(props) {
     </Container>
   );
 }
-
-
-
 
 Sidebar.propTypes = {
   archives: PropTypes.arrayOf(

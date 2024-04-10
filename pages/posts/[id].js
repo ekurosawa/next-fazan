@@ -99,7 +99,7 @@ export default function Post({ postData }) {
             />
           </Box>
         </Box>
-        <Box sx={{ height: "15vh" }}></Box>
+        <Box sx={{ height: "7vh" }}></Box>
       </Container>
       <Footer></Footer>
     </ThemeProvider >

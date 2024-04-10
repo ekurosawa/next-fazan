@@ -89,7 +89,7 @@ export default function Home({ allPostsData }) {
                 className={NSJ.className}
                 variant="h4"
                 align="center"
-                sx={{ color: "#1a1a1a", mb: 1 }}>
+                sx={{ color: "#1a1a1a", mb: 1.5 }}>
                 記事一覧
               </Typography>
             </Box>
@@ -126,7 +126,7 @@ export default function Home({ allPostsData }) {
                           {writer}
                         </Typography>
                       </Box>
-                      <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }}  className={NSJ.className}>
+                      <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} className={NSJ.className}>
                         {title}
                       </Typography>
                     </CardContent>

@@ -39,7 +39,7 @@ function Header(props) {
 
           <Link
             variant="button"
-            color="text.primary"
+            color="#ffffff"
             href="/writers"
             sx={{ my: 1, mx: 1.5 }}
             style={{ textDecoration: 'none' }}
@@ -48,7 +48,7 @@ function Header(props) {
           </Link>
           <Link
             variant="button"
-            color="text.primary"
+            color="#ffffff"
             href="#"
             sx={{ my: 1, mx: 1.5 }}
             style={{ textDecoration: 'none' }}
@@ -57,7 +57,7 @@ function Header(props) {
           </Link>
           <Link
             variant="button"
-            color="text.primary"
+            color="#ffffff"
             href="#"
             sx={{ my: 1, mx: 1.5 }}
             style={{ textDecoration: 'none' }}
