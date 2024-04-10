@@ -12,7 +12,7 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { pink } from '@mui/material/colors';
-
+import { Search } from '@mui/icons-material';
 
 function Header(props) {
 
@@ -24,7 +24,7 @@ function Header(props) {
       <AppBar
         position="fixed"
         elevation={1}
-        sx={{backgroundColor: "#f785e8fc", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        sx={{backgroundColor: "#00bfff", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Link 
@@ -65,9 +65,9 @@ function Header(props) {
               ABOUT
             </Link>
             {/*20240315*/}
-            <div className='search'>
+             className='search'
                 <Search />
-              </div>
+              
           </nav>
           {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login

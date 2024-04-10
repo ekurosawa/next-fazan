@@ -65,7 +65,7 @@ export default function Tag({ postData, tag }) {
                     component="a"
                     href={`/posts/${id}`}
                     style={{ color: "aliceblue" }}
-                    sx={{ aspectRatio: 4 / 1, display: 'block', flexDirection: 'column', backgroundColor: 'crimson' }}
+                    sx={{ aspectRatio: 4 / 1, display: 'block', flexDirection: 'column', backgroundColor: '#40e0d0' }}
                   >
                     <CardContent sx={{ flex: '10 auto' }} >
                       <Box px={2} sx={{ pt: 1 }} color='inherit' display="flex" justifyContent="space-between">

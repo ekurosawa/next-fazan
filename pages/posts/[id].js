@@ -27,11 +27,7 @@ import { Link, Typography } from '@mui/material';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+const darkTheme = createTheme();
 
 export default function Post({ postData }) {
   return (

@@ -28,7 +28,6 @@ import Footer from '../pageparts/Footer';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
-
 import { Noto_Sans_JP } from "next/font/google";
 
 const NSJ = Noto_Sans_JP({
@@ -104,7 +103,7 @@ export default function Home({ allPostsData }) {
                   <Card
                     component="a"
                     href={`/posts/${id}`}
-                    style={{ backgroundColor: "#ffeeff" }}
+                    style={{ backgroundColor: "#40e0d0" }}
                     sx={{ aspectRatio: 1 / 1, display: 'flex', flexDirection: 'column' }}
                   >
                     <CardMedia
