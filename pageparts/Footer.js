@@ -11,7 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 
 const defaultTheme = createTheme();
 
-export function Footer() {
+function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
 
