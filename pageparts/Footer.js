@@ -11,7 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 
 const defaultTheme = createTheme();
 
-export default function Footer() {
+export function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
 
@@ -33,9 +33,11 @@ export default function Footer() {
           </Typography>
           <Copyright />
           </Container>
-          {/*<div className='search'>
+          <Container >
+          <div className='search'>
             <Search />
-          </div>*/}
+          </div>
+        </Container>
       </Toolbar>
     </ThemeProvider>
   );
