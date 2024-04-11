@@ -52,8 +52,6 @@ export default function Post({ postData }) {
               py={1}
               sx={{
                 fontSize: 18,
-                //fontWeight: "bold",
-                //color: "text.first"
               }}>
               {postData.date}
             </Typography>
@@ -88,7 +86,7 @@ export default function Post({ postData }) {
           <Typography
             sx={{
               fontSize: 16, textAlign: "right"
-            }} //color="text.secondary" 
+            }}
           >
             {postData.writer}
           </Typography>
@@ -107,7 +105,7 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticProps({ params }) {
-  // markdownToHtmlで
+  // markdownToHtmlで記事をへんかん
   const content = await markdownToHtml(Post.content || '')
   const postData = await getPostData(params.id);
   return {

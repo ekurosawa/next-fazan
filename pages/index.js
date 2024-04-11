@@ -173,6 +173,3 @@ export async function getStaticProps() {
     },
   };
 }
-
-
-

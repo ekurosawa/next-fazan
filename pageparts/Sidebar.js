@@ -7,18 +7,16 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
-import  Container  from '@mui/material/Container';
-
-
+import Container from '@mui/material/Container';
 
 function Sidebar(props) {
   const { archives, description, social, title } = props;
 
   return (
     <Container maxWidth="lg">
-    <Grid sx={{ py: 6 }} item xs={12} md={4}>
+      <Grid sx={{ py: 6 }} item xs={12} md={4}>
 
-      {/*<Paper
+        {/*<Paper
         align="center"
         elevation={3}
         maxWidth="350px"
@@ -27,40 +25,40 @@ function Sidebar(props) {
           {sidebar.title}
         </Typography>
         <Typography>{sidebar.description}</Typography>
-  </Paper>*/}
+         </Paper>*/}
 
-      <Typography variant="h6">
-        Archives
-      </Typography>
+        <Typography variant="h6">
+          Archives
+        </Typography>
 
-    
-      {archives.map(({archive, title, url}, ) => (
-        <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none' }} color="#000000">
-          {title}
-        </Link>
-      ))}
 
-      <Typography variant="h6" sx={{ mt: 3 }}>
-        Social
-      </Typography>
+        {archives.map(({ archive, title, url },) => (
+          <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none' }} color="#000000">
+            {title}
+          </Link>
+        ))}
 
-      {social.map((network, name, key) => (
-        <Link
-          display="block"
-          variant="body1"
-          href="#"
-          key={network.name}
-          sx={{ mb: 0.5 }}
-          style={{ textDecoration: 'none' }}
-        >
-          <Stack direction="row" spacing={1} alignItems="center" style={{ textDecoration: 'none' }} color="#000000">
-            <network.icon />
-            <span >{network.name}</span>
-          </Stack>
-        </Link>
-      ))}
-    
-    </Grid>
+        <Typography variant="h6" sx={{ mt: 3 }}>
+          Social
+        </Typography>
+
+        {social.map((network, name, key) => (
+          <Link
+            display="block"
+            variant="body1"
+            href="#"
+            key={network.name}
+            sx={{ mb: 0.5 }}
+            style={{ textDecoration: 'none' }}
+          >
+            <Stack direction="row" spacing={1} alignItems="center" style={{ textDecoration: 'none' }} color="#000000">
+              <network.icon />
+              <span >{network.name}</span>
+            </Stack>
+          </Link>
+        ))}
+
+      </Grid>
     </Container>
   );
 }

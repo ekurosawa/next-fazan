@@ -12,7 +12,6 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { pink } from '@mui/material/colors';
-import { Search } from '@mui/icons-material';
 
 function Header(props) {
 
@@ -26,7 +25,7 @@ function Header(props) {
         elevation={1}
         sx={{ backgroundColor: "#00bfff", borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
-        <Toolbar sx={{ flexWrap: 'wrap' }}>
+        <Toolbar sx={{ flexWrap: 'wrap' }} >
           <Link
             fontStyle="bold"
             variant="h5"
@@ -49,7 +48,7 @@ function Header(props) {
           <Link
             variant="button"
             color="#ffffff"
-            href="#"
+            href="/serialization"
             sx={{ my: 1, mx: 1.5 }}
             style={{ textDecoration: 'none' }}
           >
@@ -58,16 +57,13 @@ function Header(props) {
           <Link
             variant="button"
             color="#ffffff"
-            href="#"
+            href="/about"
             sx={{ my: 1, mx: 1.5 }}
             style={{ textDecoration: 'none' }}
           >
             ABOUT
           </Link>
 
-          {/*<div className='search'>
-            <Search />
-            </div>*/}
 
           {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login

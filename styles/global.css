@@ -6,11 +6,9 @@ body {
   font-family:
     Helvetica Neue,
     sans-serif;
-    
   line-height: 1.6;
   font-size: 18px;
   background-color: #afeeee;
-
 }
 
 * {
@@ -73,7 +71,6 @@ i {
   font-style: italic;
   font-size: 0.5;
   background: linear-gradient(transparent 70%, #FF5 70%);
-
 }
 
 pre {
