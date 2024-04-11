@@ -33,9 +33,9 @@ export default function Footer() {
           </Typography>
           <Copyright />
           </Container>
-          <div className='search'>
+          {/*<div className='search'>
             <Search />
-          </div>
+          </div>*/}
       </Toolbar>
     </ThemeProvider>
   );
