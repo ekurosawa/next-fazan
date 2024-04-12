@@ -1,0 +1,3 @@
+ファイルがページであることを意図している場合は、React Component で 
+export ではなく export default を使用していることを再確認してください。すでに export default
+ を使用している場合は、返される値が有効な React Component であることを確認してください。
