@@ -70,7 +70,6 @@ const darkTheme = createTheme({
   },
 });
 
-
 export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={darkTheme}>

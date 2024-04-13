@@ -8,7 +8,6 @@ import Link from '@mui/material/Link';
 import Search from "../components/search";
 import Toolbar from "@mui/material/Toolbar";
 
-
 const defaultTheme = createTheme();
 
 function Footer() {
@@ -57,3 +56,5 @@ function Copyright() {
     </Typography>
   );
 }
+
+export default Footer;
