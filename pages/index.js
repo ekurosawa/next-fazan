@@ -28,6 +28,7 @@ import Footer from '../pageparts/Footer';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
+
 import { Noto_Sans_JP } from "next/font/google";
 
 const NSJ = Noto_Sans_JP({
@@ -64,11 +65,8 @@ const sidebar = {
   ],
 };
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+const darkTheme = createTheme();
+
 
 export default function Home({ allPostsData }) {
   return (
@@ -88,7 +86,7 @@ export default function Home({ allPostsData }) {
                 className={NSJ.className}
                 variant="h4"
                 align="center"
-                sx={{ color: "#1a1a1a", mb: 1.5 }}>
+                sx={{ color: "#1a1a1a", mb: 1 }}>
                 記事一覧
               </Typography>
             </Box>
@@ -102,7 +100,7 @@ export default function Home({ allPostsData }) {
                   <Card
                     component="a"
                     href={`/posts/${id}`}
-                    style={{ backgroundColor: "#40e0d0" }}
+                    style={{ backgroundColor: "#ffeeff" }}
                     sx={{ aspectRatio: 1 / 1, display: 'flex', flexDirection: 'column' }}
                   >
                     <CardMedia
@@ -118,14 +116,14 @@ export default function Home({ allPostsData }) {
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       <Box justifyContent="space-between" display="flex">
-                        <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} >
+                        <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary">
                           {date}
                         </Typography>
-                        <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }}  >
+                        <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
                           {writer}
                         </Typography>
                       </Box>
-                      <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} className={NSJ.className}>
+                      <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" className={NSJ.className}>
                         {title}
                       </Typography>
                     </CardContent>
@@ -143,7 +141,7 @@ export default function Home({ allPostsData }) {
           description={sidebar.description}
           archives={sidebar.archives}
           social={sidebar.social}
-        />
+                    />
       </Container>
       <Footer></Footer>
     </ThemeProvider>
@@ -172,3 +170,6 @@ export async function getStaticProps() {
     },
   };
 }
+
+
+

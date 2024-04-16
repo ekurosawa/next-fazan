@@ -9,13 +9,6 @@ import Main from '../../pageparts/Main';
 import Sidebar from '../../pageparts/Sidebar';
 import Footer from '../../pageparts/Footer';
 
-import { Noto_Sans_JP } from "next/font/google";
-
-const NSJ = Noto_Sans_JP({
-  weight: "400",
-  subsets: ["latin"],
-})
-
 import {
   Box,
   Card,
@@ -45,19 +38,19 @@ export default function Tag({ postData, tag }) {
         <Header></Header>
         <Main></Main>
 
-        <Grid container item spacing={5} sx={{ mt: 2,  pb: 1 }}>
+        <Grid container item spacing={5} sx={{ mt: 2, mb: 0, pb: 1 }}>
           <Container maxWidth="lg">
             <Typography
-              className={NSJ.className}
+              component="h1"
               variant="h4"
               align="center"
               sx={{ color: "#1a1a1a" }}
-              marginBottom={1.5}>
+              marginBottom={4}>
               #{tag}
             </Typography>
 
             <Grid
-              container sx={{ mb: 1 }} spacing={1}
+              container sx={{ mb: 1 }} spacing={1} // containe spacing : アイテム幅の調整
               >
               {postData.map(({ id, date, title }, card) => (
                 <Grid key={card} xs={12} sm={16} md={4} paddingLeft={2.5} paddingY={1}>
@@ -65,7 +58,7 @@ export default function Tag({ postData, tag }) {
                     component="a"
                     href={`/posts/${id}`}
                     style={{ color: "aliceblue" }}
-                    sx={{ aspectRatio: 4 / 1, display: 'block', flexDirection: 'column', backgroundColor: '#40e0d0' }}
+                    sx={{ display: 'flex', flexDirection: 'column' }}
                   >
                     <CardContent sx={{ flex: '10 auto' }} >
                       <Box px={2} sx={{ pt: 1 }} color='inherit' display="flex" justifyContent="space-between">

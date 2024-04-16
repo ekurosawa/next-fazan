@@ -27,11 +27,11 @@ import { Link, Typography } from '@mui/material';
 //20240319
 import { Tags, Tag, tags } from '../../lib/tag'
 
-const darkTheme = createTheme();
+const defaultTheme = createTheme();
 
 export default function Post({ postData }) {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <link rel="icon" href="favi.ico" />
       <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
 
@@ -52,6 +52,8 @@ export default function Post({ postData }) {
               py={1}
               sx={{
                 fontSize: 18,
+                fontWeight: "bold",
+                color: "text.secondary"
               }}>
               {postData.date}
             </Typography>
@@ -63,7 +65,7 @@ export default function Post({ postData }) {
                   key={Link}
                   sx={{
                     fontSize: 17,
-                    color: "#1a1a1a",
+                    color: "text.secondary",
                     textDecoration: 'none'
                   }}
                   href={`/tag/${encodeURIComponent(val)}`}>
@@ -86,8 +88,7 @@ export default function Post({ postData }) {
           <Typography
             sx={{
               fontSize: 16, textAlign: "right"
-            }}
-          >
+            }} color="text.secondary" >
             {postData.writer}
           </Typography>
 
@@ -97,7 +98,7 @@ export default function Post({ postData }) {
             />
           </Box>
         </Box>
-        <Box sx={{ height: "7vh" }}></Box>
+        <Box sx={{ height: "15vh" }}></Box>
       </Container>
       <Footer></Footer>
     </ThemeProvider >
@@ -105,7 +106,7 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticProps({ params }) {
-  // markdownToHtmlで記事をへんかん
+  // markdownToHtmlで
   const content = await markdownToHtml(Post.content || '')
   const postData = await getPostData(params.id);
   return {

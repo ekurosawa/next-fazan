@@ -28,6 +28,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
+
 const writerData = [
     {
         wart: '/images/itiroshirota.png',
@@ -61,11 +62,8 @@ const writerData = [
     },
 ];
 
-const darkTheme = createTheme({
-    palette: {
-        mode: 'dark',
-    },
-});
+
+const darkTheme = createTheme();
 
 export default function writers() {
 
@@ -91,46 +89,49 @@ export default function writers() {
                             メンバー
                         </Typography >
                         <Grid
-                            container sx={{ mb: 1 }} spacing={4}
+                            container sx={{ mb: 1 }} spacing={4} // containe spacing : アイテム幅の調整
                         >
                             {writerData.map(({ wart, wname, intro, wnameen }, index) => (
                                 <Grid item key={index} xs={12} sm={12} md={6}>
-                                    <Card
-                                        component="a"
-                                        href="#"
-                                        style={{ color: "aliceblue" }}
-                                        sx={{ display: 'flex', flexDirection: 'column' }} >
-                                        <CardContent sx={{ flex: '10 auto' }} >
-                                            <Box display="flex">
-                                                <CardMedia
-                                                    component="img"
-                                                    sx={{ width: 151 }}
-                                                    image={wart}
-                                                    alt="writer art"
-                                                />
-                                                <Box px={2} sx={{ pt: 1 }} color='inherit'>
-                                                    <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold"  >
-                                                        {wname}
-                                                    </Typography >
-                                                    <Typography color="#1a1a1a" fontSize={11} sx={{ pb: 4 }}>
-                                                        {wnameen}
-                                                    </Typography>
-                                                    <Box display="flex" justifyContent="flex-start">
-                                                        <Typography color="#1a1a1a" fontSize={13} sx={{ whiteSpace: 'pre-line' }}  >
-                                                            {intro}
+                                        <Card
+                                            component="a"
+                                            href="#"
+                                            style={{ color: "aliceblue" }}
+                                            sx={{ display: 'flex', flexDirection: 'column' }} >
+                                            <CardContent sx={{ flex: '10 auto' }} >
+                                                <Box display="flex">
+                                                    <CardMedia
+                                                        component="img"
+                                                        sx={{ width: 151 }}
+                                                        image={wart}
+                                                        alt="writer art"
+                                                    />
+                                                    <Box px={2} sx={{ pt: 1 }} color='inherit'>
+                                                        <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold"  >
+                                                            {wname}
+                                                        </Typography >
+                                                        <Typography color="#1a1a1a" fontSize={11} sx={{ pb: 4 }}>
+                                                            {wnameen}
                                                         </Typography>
+                                                        <Box display="flex" justifyContent="flex-start">
+                                                            <Typography color="#1a1a1a" fontSize={13} sx={{ whiteSpace: 'pre-line' }}  >
+                                                                {intro}
+                                                            </Typography>
+                                                        </Box>
                                                     </Box>
                                                 </Box>
-                                            </Box>
-                                        </CardContent>
-                                    </Card>
+                                            </CardContent>
+                                        </Card>
+                                        
                                 </Grid>
                             ))}
                         </Grid>
                     </Container>
                 </Grid>
             </Container>
+
             <Footer></Footer>
+
         </ThemeProvider>
     );
 }
@@ -156,3 +157,6 @@ export async function getStaticProps() {
         },
     };
 }
+
+
+

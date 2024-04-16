@@ -6,22 +6,39 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Search from "../components/search";
-import Toolbar from "@mui/material/Toolbar";
+import Toolber from "@mui/material/Toolbar";
+import Appbar from "@mui/material/AppBar";
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary">
+      {' © '}
+      {new Date().getFullYear()}
+      {'  '}
+      <Link sx={{ fontWeight: "bold" }} color="inherit" href="https://mui.com/" style={{ textDecoration: 'none' }}>
+        F4SANT
+      </Link>{'  '}
+      All Rights Reserved.
+    </Typography>
+  );
+}
 
+// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-function Footer() {
+export default function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
 
       <CssBaseline />
-      <Container component="main" >
+      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
       </Container>
-      <Toolbar
-      disableGutters
+      <Appbar
+        component="footer"
+        position="static"
         sx={{
-          px: 2,
           py: 3,
+          px: 2,
+          mt: 'auto',
           backgroundColor: "#87cefa"
         }}
       >
@@ -31,30 +48,16 @@ function Footer() {
             Nakazuba
           </Typography>
           <Copyright />
-          </Container>
-          <Container >
+        </Container>
+        <Container >
           <div className='search'>
             <Search />
           </div>
         </Container>
-      </Toolbar>
+      </Appbar>
     </ThemeProvider>
   );
 }
 
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="text.secondary">
-      {' © '}
-      {new Date().getFullYear()}
-      {'  '}
-      <Link sx={{ fontWeight: "bold" }} color="inherit" href="https://ja.wikipedia.org/wiki/%E3%81%9F%E3%82%89%E3%81%93" style={{ textDecoration: 'none' }}>
-        F4SANT
-      </Link>{'  '}
-      All Rights Reserved.
-    </Typography>
-  );
-}
 
-export default Footer;

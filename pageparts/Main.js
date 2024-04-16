@@ -19,7 +19,7 @@ function Main(props) {
         },
       }}
     >
-      <Typography py={4} >
+      <Typography py={4} variant="h6" >
         {title}
       </Typography>
       <Divider />
