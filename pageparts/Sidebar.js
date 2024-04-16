@@ -11,7 +11,7 @@ import  Container  from '@mui/material/Container';
 
 
 
-function Sidebar(props) {
+export default function Sidebar(props) {
   const { archives, description, social, title } = props;
 
   return (
@@ -87,4 +87,3 @@ Sidebar.propTypes = {
 };
 
 
-export default Sidebar;

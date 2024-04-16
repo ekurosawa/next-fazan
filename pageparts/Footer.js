@@ -9,7 +9,7 @@ import Search from "../components/search";
 import Toolber from "@mui/material/Toolbar";
 import Appbar from "@mui/material/AppBar";
 
-function Copyright() {
+export default function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary">
       {' © '}

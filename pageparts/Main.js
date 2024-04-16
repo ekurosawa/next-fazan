@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Markdown from './Markdown';
 
-function Main(props) {
+export default function Main(props) {
   const { posts, title } = props;
 
   return (
@@ -32,4 +32,3 @@ Main.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Main;
