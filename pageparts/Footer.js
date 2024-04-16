@@ -26,10 +26,9 @@ function Copyright() {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-function Footer() {
+export default function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
-
       <CssBaseline />
       <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
       </Container>
@@ -60,7 +59,6 @@ function Footer() {
   );
 }
 
-export default Footer;
 
 
 
