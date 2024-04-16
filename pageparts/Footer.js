@@ -8,6 +8,7 @@ import Link from '@mui/material/Link';
 import Search from "../components/search";
 import Toolber from "@mui/material/Toolbar";
 import Appbar from "@mui/material/AppBar";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary">
@@ -25,7 +26,7 @@ function Copyright() {
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
-export default function Footer() {
+function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
 
@@ -58,6 +59,8 @@ export default function Footer() {
     </ThemeProvider>
   );
 }
+
+export default Footer;
 
 
 
